@@ -1,0 +1,33 @@
+h3:hover{
+    background-color: #000;
+    color: #fff;
+}
+textarea{
+    width: 100%;
+}
+textarea:focus{
+    background-color: rgb(245, 234, 236);
+    border: #000;
+}
+#red:checked + label{
+    background-color: red;
+}
+#blue:checked + label{
+    background-color: blue;
+}
+#yellow:checked + label{
+    background-color: yellow;
+}
+button{
+    float: right;
+    background-color: salmon;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    text-align: right;
+}
+button:active{
+    background-color: #ddd;
+    color: salmon;
+}
