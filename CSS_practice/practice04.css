@@ -6,21 +6,24 @@ textarea{
     width: 100%;
 }
 textarea:focus{
-    background-color: rgb(245, 234, 236);
+    background-color: #ffeeee;
     border: #000;
 }
 #red:checked + label{
     background-color: red;
+    color: #fff;
 }
 #blue:checked + label{
     background-color: blue;
+    color: #fff;
 }
 #yellow:checked + label{
     background-color: yellow;
+    color: #000;
 }
 button{
     float: right;
-    background-color: salmon;
+    background-color: #f96666;
     color: #fff;
     border-radius: 5px;
     border: none;
@@ -28,6 +31,6 @@ button{
     text-align: right;
 }
 button:active{
-    background-color: #ddd;
-    color: salmon;
+    background-color: #ccc;
+    color: #f96666;
 }
