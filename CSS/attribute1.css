@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+@font-face {
+    font-family: 'DOSPilgiMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/DOSPilgiMedium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-size: 30px;
+}
+.font-link{
+    font-family: 'Sunflower', sans-serif
+}
+.font-import{
+    font-family: 'East Sea Dokdo', cursive;
+}
+.noonnu_font{
+    font-family: 'DOSPilgiMedium';
+}

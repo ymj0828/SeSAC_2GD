@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(244, 240, 188);
+}
+h2{
+    text-align: center;
+    color: green;
+}
+table{
+    width: 100%;
+}
+table tr td{
+    text-align: right;
+}
+table tr th:first-child,
+table tr td:first-child,
+table tr td.holiday
+{
+    color: red;
+}
+table tr th:last-child,
+table tr td:last-child{
+    color: blue;
+}
