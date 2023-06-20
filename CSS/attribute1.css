@@ -6,7 +6,7 @@
     font-style: normal;
 }
 body{
-    font-size: 30px;
+    /* font-size: 30px; */
 }
 .font-link{
     font-family: 'Sunflower', sans-serif
@@ -16,4 +16,22 @@ body{
 }
 .noonnu_font{
     font-family: 'DOSPilgiMedium';
+}
+.container{
+    width: 500px;
+    background-color: aliceblue;
+}
+
+.sentences {
+    font-weight: 400;
+    font-size: 1em;
+
+    text-align: center;
+
+    text-decoration: overline;
+}
+a{
+    text-decoration: none;
+
+    color: #000;
 }
