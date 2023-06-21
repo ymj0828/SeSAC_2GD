@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+        .container div{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+        .item1{
+            background-color: crimson;
+        }
+        .item2{
+            top: 30px;
+            left: 30px;
+            background-color: chartreuse;
+        }
+        .item3{
+            top: 60px;
+            left: 60px;
+            background-color: skyblue;
+        }
+        .item1-1{
+            z-index: 1;
+        }
+        .item1-2{
+            z-index: 2;
+        }
+        .item1-3{
+            z-index: 3;
+        }
+        .item2-1{
+            z-index: 3;
+        }
+        .item2-2{
+            z-index: 1;
+        }
+        .item2-3{
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1 item1-1">1</div>
+        <div class="item2 item1-2">2</div>
+        <div class="item3 item1-3">3</div>
+    </div>
+    <div class="container">
+        <div class="item1 item2-1">1</div>
+        <div class="item2 item2-2">2</div>
+        <div class="item3 item2-3">3</div>
+    </div>
+</body>
+</html>
