@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            position: relative;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background: linear-gradient(red, orange, yellow, violet);
+        }
+        .bg-img{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 15px;
+            left: 15px;
+            border-radius: 50%;
+            border: 10px solid #fff;
+            background-color: #fff;
+            background-image: url('./image/pooh.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="bg-img"></div>
+    </div>
+</body>
+</html>
