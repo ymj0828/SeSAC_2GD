@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .items {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      border: solid 1px #000;
+      transition: 1s;
+      cursor: pointer;
+    }
+    .item1:hover {
+      transform: translateX(50px) scaleX(2);
+    }
+    .item2:hover {
+      transform: translateX(50px) skewX(-45deg);
+    }
+    .item3:hover {
+      transform: translate(300px) rotate(180deg);
+      border-radius: 50%;
+      background-color: red;
+    }
+    .item4:hover {
+      transform: translateY(50px) scale(2) rotateY(360deg);
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="item1 items"></div>
+  <div class="item2 items"></div>
+  <div class="item3 items"></div>
+  <div class="item4 items"></div>
+</body>
+</html>

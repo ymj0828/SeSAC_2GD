@@ -1,0 +1,55 @@
+/**
+ * /* common
+ *
+ * @format
+ */
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 700;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1 {
+  text-align: center;
+  color: green;
+  margin-bottom: 60px;
+}
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #ddd;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+/* TODO: header1 ~ 3까지 완성해주세요! */
+header {
+  display: flex;
+  align-items: center;
+}
+header ul {
+  display: flex;
+}
+header span, header ul li {
+  padding: 0 10px;
+}
+/* header1 */
+.header1 {
+  justify-content: space-between;
+}
+/* header2 */
+.header2 ul {
+  width: 100%;
+  justify-content: space-between;
+}
+/* header3 */
+.header3 {
+  justify-content: space-between;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 500px;
+      height: 500px;
+      display: flex;
+      border: solid blue;
+    }
+    .container2 {
+      justify-content: end;
+    }
+    .container3 {
+      flex-direction: column;
+    }
+    .container .items {
+      width: 100px;
+      height: 100px;
+    }
+    .container .item1 {
+      background-color: red;
+    }
+    .container .item2 {
+      background-color: orange;
+    }
+    .container .item3 {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container1 container">
+    <div class="item1 items">1</div>
+    <div class="item2 items">2</div>
+    <div class="item3 items">3</div>
+  </div>
+  <div class="container2 container">
+    <div class="item1 items">1</div>
+    <div class="item2 items">2</div>
+    <div class="item3 items">3</div>
+  </div>
+  <div class="container3 container">
+    <div class="item1 items">1</div>
+    <div class="item2 items">2</div>
+    <div class="item3 items">3</div>
+  </div>
+</body>
+</html>
