@@ -101,7 +101,7 @@ arr1.reverse();  // [5, 4, 3, 2, 1]
 console.log(arr1);
 
 // join 배열을 문자열로
-let str3 = arr1.join('-') // '54321'
+let str3 = arr1.join('-') // '5-4-3-2-1'
 console.log(str3);
 
 /* 반복 */

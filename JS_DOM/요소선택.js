@@ -12,7 +12,7 @@ console.log(document.getElementById('green'));
 console.log(document.getElementsByClassName('pink'));
 console.log(document.getElementsByClassName('pink')[1])
 
-// getElementByTagName
+// getElementsByTagName
 console.log(document.getElementsByTagName('div')[5]);
 
 // getElementsByName

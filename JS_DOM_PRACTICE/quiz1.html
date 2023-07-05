@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1</title>
+</head>
+<body>
+    <h3>태그 내부의 글자 변경해보기</h3>
+    <div>민트 초코는 <span>맛있다 >_<</span></div>
+
+    <h3>속성 변경해보기</h3>
+    <img src="./img/pooh.png" alt="푸" width="300">
+    <p>이요르</p>
+
+    <script>
+      const span = document.querySelector('div span');
+      span.textContent = '맛없다!!'
+
+
+      const img = document.querySelector('img');
+      img.src = './img/eeyore.png';
+      img.alt = '이요르';
+      img.width = '150';
+
+      img.setAttribute('src', './img/eeyore.png');
+      img.setAttribute('alt', '이요르');
+      img.setAttribute('width', '150');
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
