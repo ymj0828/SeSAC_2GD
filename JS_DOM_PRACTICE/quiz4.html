@@ -103,24 +103,24 @@
       ];
 
 
-for(let i = 0; i < icecreams.length; i++){
-  const img = document.createElement('img');
-  const h3 = document.createElement('h3');
-  const div = document.createElement('div');
-  const article = document.createElement('article');
+      for(let i = 0; i < icecreams.length; i++){
+        const img = document.createElement('img');
+        const h3 = document.createElement('h3');
+        const div = document.createElement('div');
+        const article = document.createElement('article');
 
-  img.src = `./img/icecream${i + 1}.png`;
-  img.alt = `${icecreams[i]}`;
-  img.classList.add('img-box');
-  h3.innerText = `Top${i + 1}`;
-  h3.classList.add('text-center');
-  div.innerText = `${icecreams[i]}`;
-  div.style.textAlign = 'center';
-  article.classList.add('article-box');
+        img.src = `./img/icecream${i + 1}.png`;
+        img.alt = `${icecreams[i]}`;
+        img.classList.add('img-box');
+        h3.innerText = `Top${i + 1}`;
+        h3.classList.add('text-center');
+        div.innerText = `${icecreams[i]}`;
+        div.style.textAlign = 'center';
+        article.classList.add('article-box');
 
-  article.append(img, h3, div);
-  section.append(article);
-}
+        article.append(img, h3, div);
+        section.append(article);
+      }
     </script>
   </body>
 </html>
