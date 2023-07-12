@@ -29,7 +29,7 @@ header .inner {
 }
 
 /* LOGO */
-header .inner i {
+header .inner i.fa-igloo {
   position: absolute;
   left: 0;
   font-size: 50px;
@@ -45,7 +45,10 @@ header .inner .menu li {
   font-weight: bold;
 }
 
-/* 768px 이하일 때의 header */
+header .inner i.fa-bars {
+  display: none;
+}
+
 header .small-menu {
   display: none;
 }
@@ -56,27 +59,39 @@ header .small-menu {
   header {
     height: 60px;
   }
-
-  header .inner i {
+  
+  header .inner i.fa-igloo {
     position: static;
   }
   
   header .inner .menu {
     display: none;
   }
-
+  
   header .small-menu {
-    display: block;
+    display: none;
     text-align: center;
     background-color: azure;
   }
-
+  header .small-menu.on {
+    display: block;
+  }
+  
   header .small-menu li {
     padding: 10px;
   }
   
   header .small-menu li:hover {
     background-color: rgb(52, 122, 134);
+    color: #fff;
+    cursor: pointer;
+  }
+  header .inner i.fa-bars {
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    font-size: 30px;
     color: #fff;
     cursor: pointer;
   }
