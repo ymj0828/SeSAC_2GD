@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날씨 api 가져오기</title>
+</head>
+<body>
+  <h1>API 사용하기 - 현재 날씨</h1>
+  <h2>강동구 날씨</h2>
+  <p class="today_text"></p>
+  <ul class="data_list"></ul>
+  <script>
+
+    const today_text = document.querySelector('.today_text');
+    const today = new Date()
+    let base_date;
+    let base_time;
+
+    function nowInfo(){
+      const year = today.getFullYear();
+      const month = `0${today.getMonth() + 1}`.slice(-2);
+      const date = `0${today.getDate()}`.slice(-2);
+      base_date = `${year}${month}${date}`;
+      
+      const hour = `0${today.getHours()}`.slice(-2);
+      const min = `0${today.getMinutes()}`.slice(-2);
+      base_time = hour - 1 + '00'
+      today_text.innerText = `${year}년 ${month}월 ${date}일 ${hour}시 ${min}분`
+    }
+
+
+
+    async function getWeatherDate(){
+      nowInfo()
+      const serviceKey = `%2FaOeCIRdOSq%2BN8KnTB%2FTLIpGR6ALho7ZkY3%2FcrGQM5whuwnJ57%2Ftvv08aharJwEFWbTkeCJiCulN%2BlhUWYi5zQ%3D%3D`
+
+      const response = await fetch(
+        `http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=${serviceKey}&pageNo=1&numOfRows=100&dataType=JSON&pageNo=10&base_date=${base_date}&base_time=${base_time}&nx=63&ny=126`,
+        {
+          method: "GET",
+        }
+      );
+      const weather = await response.json();
+      console.log(weather)
+      const weather_data = weather.response.body.items.item
+      
+      const data_list = document.querySelector('.data_list')
+      console.log(weather_data)
+      weather_data.forEach((weather_data_ele)=>{
+        const li = document.createElement('li')
+        
+        console.log(weather_data_ele.category)
+        switch (weather_data_ele.category) {
+          case 'PTY':
+            li.innerHTML = `강수상태 : ${weather_data_ele.obsrValue}`
+            data_list.append(li)
+            break;
+          case 'REH':
+            li.innerHTML = `습도 : ${weather_data_ele.obsrValue}`
+            data_list.append(li)
+            break;
+          case 'RN1':
+            li.innerHTML = `1시간 강수량 : ${weather_data_ele.obsrValue}`
+            data_list.append(li)
+            break;
+          case 'T1H':
+            li.innerHTML = `기온 : ${weather_data_ele.obsrValue}`
+            data_list.append(li)
+            break;
+            default:
+              break;
+            }
+            
+          })
+        }
+        getWeatherDate()
+
+
+
+    // const serviceKey = "BJmP5aP7lITTQ7OMUb1ZqGrFxnSitSKSBLxMa2Di6WUOsCJVc5QrAw5vO376VSHddNN4bp0v/Ni4lG26kDIUdw==";
+    // const baseUrl = "https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?";
+
+    //     let baseDate;
+    //     let baseTime;
+    //     function nowInfo() {
+    //         const year = new Date().getFullYear();
+    //         const month = `0${new Date().getMonth() + 1}`.slice(-2);
+    //         const date = `0${new Date().getDate()}`.slice(-2);
+    //         baseDate = `${year}${month}${date}`;
+    //         const hour = `0${new Date().getHours()}`.slice(-2);
+    //         const min = `0${new Date().getMinutes()}`.slice(-2);
+    //         baseTime = hour + '00'
+    //     }
+    //     nowInfo();
+    //     console.log(baseDate, baseTime)
+
+    //     const params = new URLSearchParams({
+    //         serviceKey: serviceKey,
+    //         pageNo: 1,
+    //         numOfRows: 10,
+    //         dataType: 'JSON',
+    //         base_date: baseDate,
+    //         base_time: baseTime,
+    //         nx: 55,
+    //         ny: 127
+    //     })
+
+    //     let url = baseUrl + params
+    //     console.log(url)
+    //     fetch(url)
+    //         .then((response) => response.json())
+    //         .then((json) => console.log(json.response.body.items))
+    //         .catch((err) => console.log(err))
+
+
+  </script>
+</body>
+</html>
