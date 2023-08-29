@@ -17,16 +17,16 @@ class House{
   }
 
   getAge(){
-    console.log(`${this.name}은 건축한지 ${2023 - this.year}년 지났어요`);
+    console.log(`${this.name}는 건축한지 ${2023 - this.year}년 지났어요`);
   }
   getWindow(){
     console.log(`${this.name}의 창문은 ${this.window}개 입니다.`);
   }
 }
-const house1 = new House(1789, 'old', 1);
-console.log(house1);
-house1.getAge();
-house1.getWindow();
+const house1 = new House(1789, '자이', 10);
+console.log(house1);  // House { year: 1789, name: '자이', window: 10 }
+house1.getAge();  // 자이는 건축한지 234년 지났어요
+house1.getWindow();  // 자이의 창문은 10개 입니다.
 console.log('--------')
 
 const house2 = new House(2022, '자이', 10);
@@ -48,24 +48,20 @@ class Apartment extends House{
     this.floor = floor;
     this.windowMaker = windowMaker;
   }
-
   getAptInfo(){
     return `${this.year}에 지어진 ${this.name}.
     총 층수는 ${this.floor}, 창문의 갯수는 ${this.window}`;
   }
-
   getWindow(){
     return `${this.name}아파트의 ${this.window}개의 창문은
     ${this.windowMaker}에서 만들었습니다.`
   }
-  // overriding
 }
 
 const apt1 = new Apartment(2020, 'raemian', 6, 19, 'KCC');
 console.log(apt1);
 console.log(apt1.getAptInfo());
 apt1.getAge()
-// apt1.getWindow();
 console.log(apt1.getWindow())
 
 
