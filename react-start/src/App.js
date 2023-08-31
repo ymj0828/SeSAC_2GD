@@ -5,10 +5,11 @@ import Test1 from "./Test1";
 
 function App() {
   console.log('app')
-  return
+  return(
   <>
     <Test1 text='hello'/>
   </>
+  )
 }
 
 
