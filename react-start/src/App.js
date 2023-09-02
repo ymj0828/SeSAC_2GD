@@ -1,16 +1,14 @@
-import React, {useState} from "react";
 import Test1 from "./Test1";
 
-
+// import FunctionState from './components/FunctionState'
 
 function App() {
-  console.log('app')
   return(
   <>
-    <Test1 text='hello'/>
+    {/* <FunctionState></FunctionState> */}
+    <Test1></Test1>
   </>
   )
 }
-
 
 export default App;

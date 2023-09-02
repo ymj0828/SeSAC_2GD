@@ -1,7 +1,28 @@
-import React from "react";
-function Test1({text}){
-  console.log('Test')
-  return <>{text}</>
-}
+import { useState } from "react";
 
-export default Test1
+export default function PracticeState() {
+  const [number, setNumber] = useState(0);
+  let variable = 0;
+
+  function setVariable() {
+    variable = variable + 1;
+    console.log(`변수(variable) : ${variable} / 스테이트(number):${number}`);
+  }
+  return (
+    <div>
+      <div>
+        {number}
+        {number > 7 ? "🎈" : "😊"}
+      </div>
+      <button
+        onClick={() => {
+          setNumber(number + 1);
+          setVariable();
+        }}
+      >
+        +1
+      </button>
+      <button onClick={() => setNumber(number - 1)}>-1</button>
+    </div>
+  );
+}
