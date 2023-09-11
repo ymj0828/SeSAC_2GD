@@ -1,9 +1,12 @@
+import './styles/global.css'
 import { Route, Routes } from "react-router-dom";
 import { Profile } from "./page/Profile";
 import { Board } from "./page/Board";
 import { Index } from "./page/Index";
 import { NotFound } from "./page/NotFound";
 import BoardDetail from "./page/BoardDetail";
+import { Practice } from "./page/Practice";
+import Student from "./page/Student";
 
 function App() {
   return (
@@ -22,8 +25,11 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/board" element={<Board />}></Route>
-        <Route path="*" element={<NotFound />} />
         <Route path="/board/:boardID" element={<BoardDetail />} />
+        <Route path="/practice" element={<Practice />}></Route>
+        {/* 실습 라우팅 */}
+        <Route path="/student/:name" element={<Student />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
