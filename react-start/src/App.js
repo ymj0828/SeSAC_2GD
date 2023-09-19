@@ -1,13 +1,13 @@
 // import Test1 from "./Test1";
 // import PropsMap from "./components/PropsMap";
 // import PracticeMap from "./components/practice/PracticeMap";
-// import PororoObj from './components/practice/PororoObj'
+import PororoObj from './components/practice/PororoObj'
 // import BasicCss from "./components/BasicCss";
 // import UseScss from "./components/UseScss";
 // import UseMemoObj from "./components/05_UseMemoObj";
 // import UseCallback from "./components/06_UseCallback"
 // import UseReducer from './components/07_UseReducer'
-import ContextTheme from './components/08_ContextTheme'
+// import ContextTheme from './components/08_ContextTheme'
 
 
 // import FunctionState from './components/FunctionState'
@@ -23,15 +23,15 @@ function App() {
 
   return (
     <>
-      {/* <PropsMap arr={dataArr}></PropsMap>
-      <PracticeMap></PracticeMap>
-      <PororoObj></PororoObj> */}
+      {/* <PropsMap arr={dataArr}></PropsMap> */}
+      {/* <PracticeMap></PracticeMap> */}
+      <PororoObj></PororoObj>
       {/* <BasicCss color={'blue'}></BasicCss> */}
       {/* <UseScss></UseScss> */}
       {/* <UseMemoObj></UseMemoObj> */}
       {/* <UseCallback></UseCallback> */}
       {/* <UseReducer></UseReducer> */}
-      <ContextTheme></ContextTheme>
+      {/* <ContextTheme></ContextTheme> */}
     </>
   );
 }
