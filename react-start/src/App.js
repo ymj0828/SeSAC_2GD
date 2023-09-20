@@ -1,8 +1,8 @@
 // import Test1 from "./Test1";
 // import PropsMap from "./components/PropsMap";
 // import PracticeMap from "./components/practice/PracticeMap";
-import PororoObj from './components/practice/PororoObj'
-// import BasicCss from "./components/BasicCss";
+// import PororoObj from './components/practice/PororoObj'
+import BasicCss from "./components/BasicCss";
 // import UseScss from "./components/UseScss";
 // import UseMemoObj from "./components/05_UseMemoObj";
 // import UseCallback from "./components/06_UseCallback"
@@ -25,8 +25,8 @@ function App() {
     <>
       {/* <PropsMap arr={dataArr}></PropsMap> */}
       {/* <PracticeMap></PracticeMap> */}
-      <PororoObj></PororoObj>
-      {/* <BasicCss color={'blue'}></BasicCss> */}
+      {/* <PororoObj></PororoObj> */}
+      <BasicCss color={'blue'}></BasicCss>
       {/* <UseScss></UseScss> */}
       {/* <UseMemoObj></UseMemoObj> */}
       {/* <UseCallback></UseCallback> */}

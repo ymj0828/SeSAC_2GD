@@ -18,7 +18,7 @@ export default function BasicCss({ color }) {
   };
 
   // module.css
-  const setting = Names.bind(style);
+  const setting = Names.bind(style); // 앞의 style을 빼기 위해서 bind 메소드를 사용해서 style을 미리 받아올 수 있다.
   const [isTrue, setIsTrue] = useState(true);
   const stateVal = "first";
   const stateVal2 = true;
@@ -102,8 +102,9 @@ export default function BasicCss({ color }) {
         클래스 여러개 지정하는 방법 3 - classnames 모듈 사용
       </div>
 
+      {/* 실제로 사용할 때는 문자열로 클래스 이름만 나열하면 된다. */}
       <div className={setting("first", "second")}>
-        classnames 모듈 사용해보기 - bild 이용
+        classnames 모듈 사용해보기
       </div>
       <div className={setting("first", { second: true })}>
         classnames 모듈 사용
