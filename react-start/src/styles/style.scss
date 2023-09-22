@@ -20,6 +20,7 @@ $blue_btn: #2323cd;
       background-color: yellow;
     }
   }
+  
 
   .btn {
     width: 180px;
@@ -68,7 +69,7 @@ $blue_btn: #2323cd;
     // }
 
     @for $i from 1 to 4 {
-      &nth:child(#{i}) {
+      &nth:child(#{$i}) {
         width: (80px + 20px * $i);
       }
     }
