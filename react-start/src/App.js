@@ -9,7 +9,6 @@ import BasicCss from "./components/BasicCss";
 // import UseReducer from './components/07_UseReducer'
 // import ContextTheme from './components/08_ContextTheme'
 
-
 // import FunctionState from './components/FunctionState'
 
 function App() {
@@ -26,7 +25,7 @@ function App() {
       {/* <PropsMap arr={dataArr}></PropsMap> */}
       {/* <PracticeMap></PracticeMap> */}
       {/* <PororoObj></PororoObj> */}
-      <BasicCss color={'blue'}></BasicCss>
+      <BasicCss color={"blue"}></BasicCss>
       {/* <UseScss></UseScss> */}
       {/* <UseMemoObj></UseMemoObj> */}
       {/* <UseCallback></UseCallback> */}

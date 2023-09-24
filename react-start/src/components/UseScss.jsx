@@ -39,7 +39,7 @@ export default function UseScss() {
         width={"100px"}
       />
 
-        <h1>실습문제</h1>
+      <h1>실습문제</h1>
       <div className="practice">
         <div></div>
         <div></div>
